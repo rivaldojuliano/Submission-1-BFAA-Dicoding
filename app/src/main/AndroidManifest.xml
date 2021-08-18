@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySubmission">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.ContainerActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
