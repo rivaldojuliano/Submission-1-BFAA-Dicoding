@@ -10,7 +10,7 @@ data class User(
     val avatar: Int,
     val company: String,
     val location: String,
-    val repository: Int,
-    val follower: Int,
-    val following: Int
+    val repository: String,
+    val follower: String,
+    val following: String
 ): Parcelable //add parcelable
