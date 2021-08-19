@@ -1,4 +1,4 @@
-package dev.codewithrivaldo.mysubmission.view
+package dev.codewithrivaldo.mysubmission.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frame_container"
-    tools:context=".view.ContainerActivity">
+    tools:context=".view.activity.ContainerActivity">
 
 </FrameLayout>

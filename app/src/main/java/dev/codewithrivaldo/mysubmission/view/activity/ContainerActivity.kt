@@ -1,9 +1,10 @@
-package dev.codewithrivaldo.mysubmission.view
+package dev.codewithrivaldo.mysubmission.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import dev.codewithrivaldo.mysubmission.R
+import dev.codewithrivaldo.mysubmission.view.fragment.HomeFragment
 
 class ContainerActivity : AppCompatActivity() {
 

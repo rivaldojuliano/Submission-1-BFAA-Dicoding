@@ -1,4 +1,4 @@
-package dev.codewithrivaldo.mysubmission.view
+package dev.codewithrivaldo.mysubmission.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
