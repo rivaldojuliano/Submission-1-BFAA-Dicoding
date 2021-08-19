@@ -50,4 +50,7 @@ dependencies {
 
 //    Add library circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+//    Add library glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }
