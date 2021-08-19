@@ -6,9 +6,12 @@ import android.util.Log
 import dev.codewithrivaldo.mysubmission.R
 
 class ContainerActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_container)
+
+        supportActionBar?.title = "Github User App"
 
         val mFragmentManager = supportFragmentManager
         val mHomeFragment = HomeFragment()

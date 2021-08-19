@@ -9,6 +9,7 @@ import dev.codewithrivaldo.mysubmission.databinding.ItemUserRowBinding
 import dev.codewithrivaldo.mysubmission.model.data.User
 
 class CardViewUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapter<CardViewUserAdapter.CardViewUserHolder>() {
+
     inner class CardViewUserHolder(private val binding: ItemUserRowBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) {
             with(binding) {
