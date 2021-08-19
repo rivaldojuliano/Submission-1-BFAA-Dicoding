@@ -15,7 +15,7 @@
         <activity
             android:name=".view.SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+            android:theme="@style/Theme.MySubmission.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"  />
 
