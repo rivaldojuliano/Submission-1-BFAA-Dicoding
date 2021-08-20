@@ -8,7 +8,7 @@
     tools:context=".view.fragment.DetailUserFragment">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -25,9 +25,9 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/btn_back"
         tools:text="rivaldojuliano" />
 
     <de.hdodenhof.circleimageview.CircleImageView

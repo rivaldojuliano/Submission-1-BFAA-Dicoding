@@ -1,6 +1,7 @@
 package dev.codewithrivaldo.mysubmission.view.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.codewithrivaldo.mysubmission.databinding.FragmentDetailUserBinding
 import dev.codewithrivaldo.mysubmission.model.data.User
+import dev.codewithrivaldo.mysubmission.view.activity.ContainerActivity
 
 class DetailUserFragment : Fragment() {
 
@@ -46,6 +48,16 @@ class DetailUserFragment : Fragment() {
                     tvFollowing.text = user.following + "\nFollower"
                 }
             }
+        }
+
+        back()
+    }
+
+    private fun back() {
+        binding.btnBack.setOnClickListener {
+            val mIntent = Intent(context, ContainerActivity::class.java)
+            startActivity(mIntent)
+            activity?.finish()
         }
     }
 
