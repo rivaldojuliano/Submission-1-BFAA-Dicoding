@@ -3,7 +3,7 @@ package dev.codewithrivaldo.mysubmission.model.data
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
-@Parcelize //add annotation parcelize
+@Parcelize
 data class User(
     val name: String,
     val username: String,
@@ -13,4 +13,4 @@ data class User(
     val repository: String,
     val follower: String,
     val following: String
-): Parcelable //add parcelable
+): Parcelable

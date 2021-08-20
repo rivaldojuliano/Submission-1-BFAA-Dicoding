@@ -10,6 +10,16 @@ import dev.codewithrivaldo.mysubmission.model.data.User
 
 class CardViewUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapter<CardViewUserAdapter.CardViewUserHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemCLickCallback
+
+    interface OnItemCLickCallback {
+        fun onItemCLicked(user: User)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemCLickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     inner class CardViewUserHolder(private val binding: ItemUserRowBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) {
             with(binding) {
@@ -32,6 +42,10 @@ class CardViewUserAdapter(private val listUser: ArrayList<User>): RecyclerView.A
 
     override fun onBindViewHolder(holder: CardViewUserHolder, position: Int) {
         holder.bind(listUser[position])
+
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemCLicked(listUser[holder.adapterPosition])
+        }
     }
 
     override fun getItemCount(): Int = listUser.size

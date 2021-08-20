@@ -34,7 +34,6 @@ class HomeFragment : Fragment() {
         showCardView()
     }
 
-//    get list user
     private fun getListUser(): ArrayList<User> {
         val dataAvatar = resources.obtainTypedArray(R.array.avatar)
         val dataName = resources.getStringArray(R.array.name)
@@ -66,13 +65,39 @@ class HomeFragment : Fragment() {
         return listUser
     }
 
-//    show list card view
     private fun showCardView() {
         binding.rvUser.setHasFixedSize(true)
 
         binding.rvUser.layoutManager = LinearLayoutManager(context)
         val cardViewUserAdapter = CardViewUserAdapter(list)
         binding.rvUser.adapter = cardViewUserAdapter
+
+        cardViewUserAdapter.setOnItemClickCallback(object :
+            CardViewUserAdapter.OnItemCLickCallback {
+            override fun onItemCLicked(user: User) {
+                showSelectedUser(user)
+            }
+        })
+    }
+
+    fun showSelectedUser(user: User) {
+        val mDetailUserFragment = DetailUserFragment()
+
+        val mBundle = Bundle()
+        mBundle.putParcelable(DetailUserFragment.EXTRA_USER, user)
+
+        mDetailUserFragment.arguments = mBundle
+
+        val mFragmentManager = parentFragmentManager
+        mFragmentManager.beginTransaction().apply {
+            replace(
+                R.id.frame_container,
+                mDetailUserFragment,
+                DetailUserFragment::class.java.simpleName
+            )
+            addToBackStack(null)
+            commit()
+        }
     }
 
     override fun onDestroy() {

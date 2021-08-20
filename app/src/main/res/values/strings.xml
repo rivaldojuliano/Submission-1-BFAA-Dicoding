@@ -2,7 +2,6 @@
     <string name="app_name">My Submission</string>
     <string name="github_user_app">Github User App</string>
 
-    <!--    create resource string array-->
     <string-array name="name">
         <item>Jake Wharton</item>
         <item>Amit Shekhar</item>
