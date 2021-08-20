@@ -9,7 +9,8 @@
     android:layout_marginBottom="6dp"
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp"
-    app:cardCornerRadius="6dp">
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@color/blueGrey_500">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:civ_border_color="@color/blueGrey_500"
+        app:civ_border_color="@color/white"
         app:civ_border_width="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/img_avatar"
         app:layout_constraintTop_toTopOf="@+id/img_avatar"
         tools:text="Name" />
@@ -46,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tv_city"
         app:layout_constraintStart_toStartOf="@+id/tv_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_name"
@@ -57,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/img_avatar"
         app:layout_constraintStart_toStartOf="@+id/tv_username"
         tools:text="City" />

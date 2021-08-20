@@ -7,22 +7,37 @@
     android:padding="16dp"
     tools:context=".view.fragment.DetailUserFragment">
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
         tools:text="rivaldojuliano" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_avatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         app:civ_border_color="@color/blueGrey_500"
         app:civ_border_width="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_username"
         tools:src="@color/teal_200" />
@@ -31,34 +46,38 @@
         android:id="@+id/tv_repository"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        tools:text="Repository"
-        android:textColor="@color/black"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/img_avatar"
-        app:layout_constraintStart_toEndOf="@+id/img_avatar"
-        app:layout_constraintTop_toTopOf="@+id/img_avatar" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_follower"
+        app:layout_constraintEnd_toStartOf="@+id/tv_follower"
+        app:layout_constraintTop_toTopOf="@+id/tv_follower"
+        tools:text="Repository" />
 
     <TextView
         android:id="@+id/tv_follower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_repository"
-        app:layout_constraintEnd_toStartOf="@+id/tv_following"
-        app:layout_constraintStart_toEndOf="@+id/tv_repository"
-        app:layout_constraintTop_toTopOf="@+id/tv_repository"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/img_avatar"
+        app:layout_constraintStart_toStartOf="@+id/img_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/img_avatar"
         tools:text="Follower" />
 
     <TextView
         android:id="@+id/tv_following"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_follower"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_follower"
         app:layout_constraintTop_toTopOf="@+id/tv_follower"
         tools:text="Following" />
 
@@ -66,18 +85,20 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_repository"
         tools:text="Rivaldo Juliano" />
 
     <TextView
         android:id="@+id/tv_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/tv_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_name"
         tools:text="Company" />
@@ -86,8 +107,9 @@
         android:id="@+id/tv_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/tv_company"
         app:layout_constraintTop_toBottomOf="@+id/tv_company"
         tools:text="Location" />
