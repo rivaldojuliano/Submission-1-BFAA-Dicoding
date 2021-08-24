@@ -12,9 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
+        android:contentDescription="@string/button_back"
         android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,RedundantDescriptionCheck" />
 
     <TextView
         android:id="@+id/tv_username"
@@ -40,6 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        tools:ignore="ImageContrastCheck"
         tools:src="@color/teal_200" />
 
     <TextView
@@ -113,5 +116,4 @@
         app:layout_constraintStart_toStartOf="@+id/tv_company"
         app:layout_constraintTop_toBottomOf="@+id/tv_company"
         tools:text="Location" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

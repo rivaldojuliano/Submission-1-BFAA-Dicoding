@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My Submission</string>
     <string name="github_user_app">Github User App</string>
+    <string name="button_back">button back</string>
+    <string name="image_github">Image github</string>
 
     <string-array name="name">
         <item>Jake Wharton</item>

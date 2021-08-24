@@ -5,7 +5,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 <!--    Add colors   -->
-    <color name="blueGrey_200">#8eacbb</color>
     <color name="blueGrey_500">#607d8b</color>
     <color name="blueGrey_700">#34515e</color>
 </resources>

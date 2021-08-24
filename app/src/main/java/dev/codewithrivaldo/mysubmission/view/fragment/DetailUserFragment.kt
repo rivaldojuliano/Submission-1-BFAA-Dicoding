@@ -29,10 +29,15 @@ class DetailUserFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        getDataUser()
+        back()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun getDataUser() {
         if (arguments != null) {
             val user = arguments?.getParcelable<User>(EXTRA_USER)
 
@@ -49,8 +54,6 @@ class DetailUserFragment : Fragment() {
                 }
             }
         }
-
-        back()
     }
 
     private fun back() {

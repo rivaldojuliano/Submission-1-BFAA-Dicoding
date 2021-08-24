@@ -80,7 +80,7 @@ class HomeFragment : Fragment() {
         })
     }
 
-    fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: User) {
         val mDetailUserFragment = DetailUserFragment()
 
         val mBundle = Bundle()
