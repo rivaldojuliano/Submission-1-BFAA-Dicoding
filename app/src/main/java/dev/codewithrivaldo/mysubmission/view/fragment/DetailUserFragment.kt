@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import dev.codewithrivaldo.mysubmission.R
 import dev.codewithrivaldo.mysubmission.databinding.FragmentDetailUserBinding
 import dev.codewithrivaldo.mysubmission.model.data.User
 import dev.codewithrivaldo.mysubmission.view.activity.ContainerActivity
@@ -15,10 +16,6 @@ class DetailUserFragment : Fragment() {
 
     private var _binding: FragmentDetailUserBinding? = null
     private val binding get() = _binding!!
-
-    companion object {
-        const val EXTRA_USER = "extra_user"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +33,6 @@ class DetailUserFragment : Fragment() {
         back()
     }
 
-    @SuppressLint("SetTextI18n")
     private fun getDataUser() {
         if (arguments != null) {
             val user = arguments?.getParcelable<User>(EXTRA_USER)
@@ -48,9 +44,9 @@ class DetailUserFragment : Fragment() {
                     tvName.text = user.name
                     tvCompany.text = user.company
                     tvLocation.text = user.location
-                    tvRepository.text = user.repository + "\nRepository"
-                    tvFollower.text = user.follower + "\nFollower"
-                    tvFollowing.text = user.following + "\nFollower"
+                    tvRepository.text = getString(R.string.repository, user.repository)
+                    tvFollower.text = getString(R.string.repository, user.follower)
+                    tvFollowing.text = getString(R.string.following, user.following)
                 }
             }
         }
@@ -67,5 +63,9 @@ class DetailUserFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    companion object {
+        const val EXTRA_USER = "extra_user"
     }
 }

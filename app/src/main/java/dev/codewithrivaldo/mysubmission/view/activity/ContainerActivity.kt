@@ -12,8 +12,6 @@ class ContainerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_container)
 
-        supportActionBar?.title = "Github User App"
-
         val mFragmentManager = supportFragmentManager
         val mHomeFragment = HomeFragment()
         val fragment = mFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
